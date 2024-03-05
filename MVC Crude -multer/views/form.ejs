@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form entry</title>
+</head>
+<body>
+    <center>
+        <form method="post" action="/add" enctype="multipart/form-data">
+            <table border="1">
+                <tr>
+                    <td>Name</td>
+                    <td> <input type="text" name="name"> </td>
+                </tr>
+               
+                <tr>
+                    <td>File</td>
+                    <td><input type="file" name="avtar" multiple  > </td>
+                </tr>
+                
+                <tr>
+                    <% city = ["Surat","Rajkot","Bhavnagar","Vadodara"] %>
+                    <td>City</td>
+                    <td>
+                        <select name="city" id="">
+                            <option value="">--select--</option>
+                            <% city.map((val)=>{ %>  
+                                <option value="<%= val %>"><%= val %></option> 
+                            <% }) %>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+            <a href="/"> View Data </a>
+        </form>
+    </center>
+</body>
+</html>

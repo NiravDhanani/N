@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <center>
+        <table border="1" >
+            <tr>
+                <th>No</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+
+            <tbody>
+                <% record.map((val,i)=>{i++ %> 
+                <tr>
+
+                    <td> <%= i %> </td>
+                    <td> <%= val.name %> </td>
+                    <td> <%= val.city %> </td>
+                    <td>
+                        <% val.avtar.map((item) => { %>
+                            <img src="<%= item %>" width="100px" alt="">
+                        <% }) %>
+                    </td>
+                    
+                   
+
+                    <td>
+                        <a href="/deleteData?id=<%= val.id %>">Delete</a>
+                        <a href="/editData?id=<%= val.id %>">Edit</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+
+        <a href="/form">Enter Data </a>
+
+    </center>
+</body>
+</html>
