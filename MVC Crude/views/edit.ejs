@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Data</title>
+</head>
+<body>
+    <form action="/update" method="post" enctype="multipart/form-data">
+        <table border="1">
+            <input type="text" name="editid" value="<%= single.id %>">
+            <tr>
+                <td>Name</td>
+                <td> <input type="text" name="name"  value="<%= single.name %>"> </td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td> 
+                    <input type="radio" name="geneder" value="male" <% if(single.geneder=="male"){ %> checked <% } %> > Male
+                    <input type="radio" <% if(single.geneder=="female"){ %> checked <% } %>  name="geneder" value="female"> Female
+                 </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <% city = ["surat","rajkot","Amreli"] %>
+                    <select name="city" id="">
+                        <option>--select--</option>
+                        <% city.map((val)=> { %>
+                            <option  name="city" value="<%= val %>" <% if(single.city==val){ %> selected <% } %> ><%= val %></option>
+                        <% }) %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td><input type="file" name="avatar"> 
+                    <img src="<%= single.image %>">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+    <a href="/">View Data</a>
+</body>
+</html>

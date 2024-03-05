@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Data</title>
+</head>
+<body>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <table border="1">
+            <tr>
+                <td>Name</td>
+                <td> <input type="text" name="name"> </td>
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td> 
+                    <input type="radio" name="geneder" value="male"> Male
+                    <input type="radio" name="geneder" value="female"> Female
+                 </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <% city = ["surat","rajkot","Amreli"] %>
+                    <select name="city" id="">
+                        <option>--select--</option>
+                        <% city.map((val)=> { %>
+                            <option  name="city" value="<%= val %>" ><%= val %></option>
+                        <% }) %>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>image</td>
+                <td><input type="file" name="avatar"> </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+    <a href="/">View Data</a>
+</body>
+</html>

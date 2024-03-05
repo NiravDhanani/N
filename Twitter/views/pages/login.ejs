@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's happening</title>
+  <link rel="shortcut icon" href="/Assets/img/logo/twitter.png" type="image/x-icon">
+  <!-- bootstrap link  -->
+  <link href="/Assets/css/bootstrap.min.css" rel="stylesheet">
+  <!-- font - awsome   -->
+  <link rel="stylesheet" href="/Assets/css/all.min.css">
+  <!-- custom css  -->
+  <link rel="stylesheet" href="/Assets/css/style.css">
+</head>
+
+<body>
+  <section class="py-100 d-flex align-items-center" style="height: 100vh">
+    <div class="w-100 overflow-hidden">
+      <div class="row ">
+        <div class="col-lg-6">
+          <div class="logo d-flex justify-content-center aling-items-center p-5">
+            <img src="/Assets/img/logo/twitter.png" alt="" class='img-fluid'>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="heading">
+            <h1 class="py-20">Happening now</h1>
+            <span class="py-20 sub-heading">Join today</span>
+            <div class="googlebtn">
+              <button class="log-btn">
+                <img src="/Assets/img/logo/google-symbol.png" alt="Google" class="Google">
+                Sign up with Google
+              </button>
+            </div>
+            <div class="applebtn">
+              <button class="log-btn text-bolder"><i class="fa-brands fa-apple apple"></i> Sign up with Apple </button>
+            </div>
+            <div class="divider d-flex justify-content-center">
+              <span class="sub-devide">or</span>
+            </div>
+            <div class="create">
+              <button class="create-btn" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Create account</a>
+              </button>
+              <p class="discription">By signing up, you agree to the <a href="https://twitter.com/en/tos">
+                  Terms of Service</a> and <a href="https://twitter.com/en/privacy">Privacy Policy</a>,
+                including <a href="https://help.twitter.com/en/rules-and-policies/x-cookies">Cookie Use.</a></p>
+            </div>
+            <div class="singin">
+              <h4 >Already have an account?</h4>
+              <button class="singin-btn" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"> Sign in </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- for creating new account  -->
+    <form action="/addUser" method="post" class="register-form" enctype="multipart/form-data">
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" data-bs-backdrop="static"
+        aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header justify-content-start">
+              <button type="button" class="btn-close d-flex justify-content-center align-items-center white_color"
+                data-bs-dismiss="modal" aria-label="Close" style="margin: 0;"><i class="fa-solid fa-xmark"></i></button>
+              <h1 class="modal-title ms-3 fs-5 white_color" id="exampleModalToggleLabel">Step 1 of 2</h1>
+            </div>
+            <div class="modal-body mx-5">
+              <div class="modal_body_contetnt">
+                <div>
+                  <h3 class="white_color">Create your account</h3>
+                </div>
+                <div>
+                  <div class="position-relative my-4">
+                    <input type="text" name="name" id="name" placeholder="Name" class="white_color w-100">
+                    <!-- <span class="input_name">Name</span> -->
+                  </div>
+                  <div class="position-relative my-4">
+                    <input type="tel" name="email" id="email" placeholder="Email" class="white_color w-100" required>
+                    <!-- <span class="input_name">Email</span> -->
+                  </div>
+                  <div class="position-relative my-4">
+                    <input type="tel" name="phone" id="phone" placeholder="phone" class="white_color w-100" required>
+                    <!-- <span class="input_name">Phone</span> -->
+                  </div>
+                  <div class="position-relative my-4">
+                    <input type="file" name="image" id="" placeholder="upload file" class="white_color w-100" required>
+                    <!-- <span class="input_name">Phone</span> -->
+                  </div>
+
+                  <!-- <div class="position-relative my-4">
+                                <input type="date" name="dob" id="dob">
+                                <span class="input_name">Date of birth</span>
+                            </div> -->
+                </div>
+                <div>
+                  <a class="next_btn f_15_18_500 d-block text-center black_color w-100 "
+                    data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" style="cursor: pointer;">Next</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" data-bs-backdrop="static"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header justify-content-start">
+              <button type="button" class="btn-close d-flex justify-content-center align-items-center white_color"
+                data-bs-target="#exampleModalToggle" data-bs-toggle="modal" style="margin: 0;"><i
+                  class="fa-solid fa-arrow-left"></i></button>
+              <h1 class="modal-title ms-3 fs-5 white_color" id="exampleModalToggleLabel">Step 2 of 2</h1>
+            </div>
+
+            <div class="modal-body mx-5">
+              <div class="modal_body_contetnt">
+                <div>
+                  <h3 class="white_color">Create your account</h3>
+                </div>
+                <div>
+                  <div class="position-relative my-4">
+                    <input type="password" name="password" id="password" placeholder="Password"
+                      class="white_color w-100">
+                  </div>
+                  <div class="position-relative my-4">
+                    <input type="password" name="c_password" id="c_password" placeholder="Confirm Password"
+                      class="white_color w-100">
+                  </div>
+                </div>
+                <div>
+                  <!-- <a class="next_btn f_15_18_500 d-block text-center black_color w-100" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</a> -->
+                  <button class="submit-btn  d-block text-center  w-100" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <!-- for singup  -->
+    <form action="/loginUser" method="post" class="register">
+      <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" data-bs-backdrop="static"
+        aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header justify-content-start">
+              <button type="button" class="btn-close d-flex justify-content-center align-items-center white_color"
+                data-bs-dismiss="modal" aria-label="Close" style="margin: 0;"><i class="fa-solid fa-xmark"></i></button>
+              <!-- <h1 class="modal-title ms-3 fs-5 white_color" id="exampleModalToggleLabel">Step 2 of 2</h1> -->
+            </div>
+            <div class="modal-body mx-5">
+              <div class="modal_body_contetnt">
+                <div>
+                  <h3 class="white_color">Login your account</h3>
+                </div>
+                <div>
+                  <div class="position-relative my-4">
+                    <input type="email" name="email" placeholder="Email"  class="white_color w-100"
+                      required>
+                    <!-- <span class="input_name">Email</span> -->
+                  </div>
+                  <div class="position-relative my-4">
+                    <input type="password" name="password" placeholder="Password" 
+                      class="white_color w-100">
+                    <!-- <div>
+                      <img src="/public/img/eye.svg" id="c_pass" alt="showPassword">
+                    </div> -->
+                    <!-- <span class="input_name">Password</span> -->
+                  </div>
+                </div>
+                <div>
+                  <!-- <a class="next_btn f_15_18_500 d-block text-center black_color w-100" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Next</a> -->
+                  <button class="text-center black_color w-100" type="submit">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+  </section>
+  <script src="/Assets/js/bootstrap.bundle.min.js"></script>
+  <script src="/Assets/js/jquery-3.7.0.min.js"></script>
+  <!-- for popup screen  -->
+  <script>
+    $(document).ready(function () {
+      // Event handler for showing the modal
+      $('#exampleModalToggle').click('show.bs.modal', function () {
+        // Add a class to the body to change the background color
+        $('#mainBody').addClass('modal-open-bg');
+      });
+
+      // Event handler for hiding the modal
+      $('#exampleModalToggle').on('hidden.bs.modal', function () {
+        // Remove the class to revert the background color
+        $('#mainBody').removeClass('modal-open-bg');
+      });
+    });
+  </script>
+</body>
+
+</html>

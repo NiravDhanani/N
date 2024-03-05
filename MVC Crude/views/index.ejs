@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Page</title>
+</head>
+<body>
+    
+
+    <center>
+        
+        <table border="1">
+            <tr>
+                <th>no</th>
+                <th>name</th>
+                <th>geneder</th>
+                <th>city</th>
+                <th>image</th>
+                <th>Action</th>
+            </tr>
+            <% record.map((val,i)=>{ %>
+                <tr>)
+                    <td> <%= ++i %></td>
+                    <td> <%= val.name %></td>
+                    <td> <%= val.geneder %></td>
+                    <td> <%= val.city %></td>
+                    <td> 
+                        <img src="<%= val.image %>" width="100px">
+                    </td>
+                    <td> 
+                        <a href="/deleteData?id=<%= val.id %>">DELETE</a>
+                        <a href="/editData?id=<%= val.id %>">EDIT</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </table>
+        <a href="/form">Add Data</a>
+    </center>
+
+
+
+
+</body>
+</html>

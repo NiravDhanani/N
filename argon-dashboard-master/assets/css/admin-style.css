@@ -1,0 +1,53 @@
+.bg-primary-decora1{
+    background-color: #e4a11bae;
+}
+.admin-des-profile-box{
+    /* width: 20px; */
+    /* height: 20px; */
+    /* border-radius: 50%; */
+    /* background-color: red; */
+}
+/* .admin-des-profile-box img{
+    
+} */
+
+
+/* nd start   */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* Adjust the gap between items */
+  justify-content: center; /* Center items horizontally */
+  padding: 10px;
+}
+
+.product-item {
+  flex: 1 1 300px; /* Adjust the width of each item */
+  border-radius: 7px;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: hidden; /* Hide overflowing content */
+  height: 400px; /* Fixed height for each product item */
+  padding: 10px;
+}
+
+.product-item img {
+  width: 100%; /* Ensure the image fills its container */
+  height: 70%; /* Set the image height to 70% of the container height */
+  display: block; /* Remove extra space below inline images */
+  border-radius: 7px 7px 0 0; /* Adjust border radius for top corners */
+  object-fit: cover; /* Maintain image aspect ratio and cover the container */
+}
+  
+  @media (max-width: 768px) {
+    .product-item {
+      flex-basis: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-item {
+      flex-basis: 100%; /* Single item per row on smaller screens */
+    }
+  }
+  

@@ -1,0 +1,31 @@
+<script src="/Assets/js/bootstrap.bundle.min.js"></script>
+<script src="/Assets/js/jquery-3.7.0.min.js"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var defaultColor = ""; // Variable to store the default icon color
+
+        $(".nav-item a").click(function () {
+            // Remove the active class from all other items
+            $(".nav-item a").removeClass("active");
+
+            // Add the active class to the clicked item
+            $(this).addClass("active");
+
+            // Reset color for all icons
+            $(".nav-item a i").css("color", defaultColor);
+
+            // Set a different color for the icon inside the clicked <a>
+            defaultColor = $(this).find("i").css("color");
+            $(this).find("i").css("color", "#e0e0e09a");
+        });
+    });
+</script>
+
+
+
+</body>
+
+</html>
